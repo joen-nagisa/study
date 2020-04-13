@@ -1,14 +1,11 @@
 package Pattern.Decorator.test;
 
-public class Tea extends Beverage {
+public class Tea extends Drink {
     Tea(){
-        description = "Tea's Beverage";
+        description = "Tea's description";
     }
-
-
-
     @Override
-    public Double cost() {
-        return 20.0;
+    public int cost() {
+        return 10;
     }
 }

@@ -1,18 +1,17 @@
 package Pattern.Decorator.test;
 
-public class Salt extends BeverageDecorator {
-    private Beverage beverage;
-    Salt(Beverage beverage1){
-        this.beverage = beverage1;
+public class Salt extends Condiment {
+    Drink drink;
+    Salt(Drink drink){
+        this.drink = drink;
     }
-
     @Override
     public String getDescription() {
-        return beverage.getDescription()+" Salt ";
+        return drink.getDescription()+" Salt ";
     }
 
     @Override
-    public Double cost() {
-        return beverage.cost()+0.3;
+    public int cost() {
+        return drink.cost()+3;
     }
 }
